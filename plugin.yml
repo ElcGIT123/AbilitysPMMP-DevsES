@@ -1,7 +1,7 @@
 name: AblitysPMMPDev-ES
 api: 5.0.0
 main: abilityspmmp\elc\Main
-version: 1.0.0
+version: 0.1.0-beta
 author: PMMPDevs-ES(elc)
 description: "Un plugin de abilitys especializado para el pvp en factions"
 
