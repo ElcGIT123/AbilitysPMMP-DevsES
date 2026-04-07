@@ -1,0 +1,188 @@
+# Mensaje cuando el jugador esta en cooldown
+# {SECONDS}: Segundos de cooldown
+in_cooldown_message: "No puedes usar esta ability hasta {SECONDS}"
+
+announcement_to_victim: true
+announcement_to_victim_msg: "Han usado {ABILITY_NAME} contra ti!"
+
+use_trhowable_to_boostable_msg: "Esta ability es arrojable no boosteable!"
+use_boostable_to_trhowable_msg: "Esta ability es boosteable no arrojable!"
+
+debug_mode: true
+
+abilities:
+  ability_jump:
+    name: "Jump ability"
+    info: "da un gran salto"
+    item_lore: 
+      - "AbilityJump"
+      - "Cooldown: 10s" 
+    cooldown_time: 10
+    particle_density: 25 #Recomendado: 20-35
+    particle_range: 2
+    custom:
+       power: 1.0
+       impulse: 0.8
+
+  ability_turtle:
+    name: "Turtle ability"
+    info: "Da efectos para aguantar mas en PvP"
+    item_lore: 
+      - "AbilityTurtle"
+      - "Cooldown: 10s" 
+    cooldown_time: 10
+    particle_density: 25
+    particle_range: 2
+    custom:
+      effect_absorption_duration: 10
+      effect_resistance_duration: 10
+      effect_fireresistance_duration: 10
+      effect_regeneration_duration: 10
+      effect_slowness_duration: 10
+      effect_absorption_level: 2
+      effect_resistance_level: 2
+      effect_fireresistance_level: 2
+      effect_regeneration_level: 2
+      effect_healthboost_level: 1
+      effect_slowness_level: 1
+
+  ability_killer:
+    name: "Killer ability"
+    info: "Da efectos para matar en PvP"
+    item_lore: 
+      - "AbilityKiller"
+      - "Cooldown: 10s" 
+    cooldown_time: 10
+    particle_density: 25
+    particle_range: 2
+    custom:
+      effect_strength_duration: 20
+      effect_speed_duration: 20
+      effect_nausea_duration: 5
+      effect_strength_level: 2
+      effect_speed_level: 2
+      effect_nausea_level: 1
+
+  ability_irongiant:
+    name: "IronGiant ability"
+    info: "Da por x segs un incremento de vida"
+    item_lore: 
+      - "AbilityIronGiant"
+      - "Cooldown: 10s" 
+    cooldown_time: 10
+    particle_density: 25
+    particle_range: 2
+    custom:
+      effect_healthboost_duration: 20
+      effect_slowness_duration: 10
+      effect_regeneration_duration: 7
+      effect_healthboost_level: 4
+      effect_slowness_level: 2
+      effect_regeneration_level: 3
+
+  ability_repair:
+    name: "Ability Testing"
+    info: "Esta ability solo debe ser para uso administrativo, prueba la funcionalidad de x ability de tipo Trhowing"
+    item_lore:
+      - "AbilityTesting"
+      - "Cooldown: 5"
+    cooldown_time: 5
+    particle_density: 25
+    particle_range: 2
+    custom:
+
+  ability_goblin:
+    name: "Ability Testing"
+    info: "Esta ability solo debe ser para uso administrativo, prueba la funcionalidad de x ability de tipo Trhowing"
+    item_lore:
+      - "AbilityTesting"
+      - "Cooldown: 5"
+    cooldown_time: 5
+    particle_density: 25
+    particle_range: 2
+    custom:
+      goblin_scale: 0.5
+      effects_duration: 8
+
+  ability_kickstick:
+    name: "KickStick ability"
+    info: "Empuja al jugador al que golpea con esta ability"
+    item_lore: 
+      - "AbilityKickstick"
+      - "Cooldown: 10s" 
+    cooldown_time: 10
+    particle_density: 25
+    particle_range: 2
+    custom:
+      power: 10
+      impulse: 2
+
+  ability_barchaos:
+    name: "Ability Barchaos"
+    info: "Desordena la hotbar del enemigo"
+    item_lore:
+      - "AbilityTesting"
+      - "Cooldown: 5"
+    cooldown_time: 5
+    particle_density: 25
+    particle_range: 2
+    custom:
+      swap_iterations: 6
+
+  ability_coold:
+    name: "Ability Coold"
+    info: "Congela al jugador"
+    item_lore:
+      - "AbilityCoold"
+      - "Cooldown: 5"
+    cooldown_time: 5
+    particle_density: 25
+    particle_range: 2
+    custom:
+      frized_time: 5
+      frized_end_message: "Ya puedes moverte!"
+
+  ability_destroyer:
+    name: "Ability Testing"
+    info: "Esta ability solo debe ser para uso administrativo, prueba la funcionalidad de x ability de tipo Trhowing"
+    item_lore:
+      - "AbilityTesting"
+      - "Cooldown: 5"
+    cooldown_time: 5
+    particle_density: 25
+    particle_range: 2
+    custom:
+
+  ability_virus:
+    name: "Ability Testing"
+    info: "Esta ability solo debe ser para uso administrativo, prueba la funcionalidad de x ability de tipo Trhowing"
+    item_lore:
+      - "AbilityTesting"
+      - "Cooldown: 5"
+    cooldown_time: 5
+    particle_density: 25
+    particle_range: 2
+    custom:
+
+  ability_chaos:
+    name: "Ability Testing"
+    info: "Esta ability solo debe ser para uso administrativo, prueba la funcionalidad de x ability de tipo Trhowing"
+    item_lore:
+      - "AbilityTesting"
+      - "Cooldown: 5"
+    cooldown_time: 5
+    particle_density: 25
+    particle_range: 2
+    custom:
+
+  ability_testing:
+    name: "Ability Testing"
+    info: "Esta ability solo debe ser para uso administrativo, prueba la funcionalidad de x ability de tipo Trhowing"
+    item_lore:
+      - "AbilityTesting"
+      - "Cooldown: 5"
+    cooldown_time: 5
+    particle_density: 25
+    particle_range: 2
+    custom:
+    

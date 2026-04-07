@@ -1,0 +1,14 @@
+name: AblitysPMMPDev-ES
+api: 5.0.0
+main: abilityspmmp\elc\Main
+version: 1.0.0
+author: PMMPDevs-ES(elc)
+description: "Un plugin de abilitys especializado para el pvp en factions"
+
+permissions:
+  abilityspmmp_cmd_giveability:
+    description: "Obten cualquier ability mediante su id"
+    default: op
+  abilityspmmp_cmd_ability:
+    description: "Obten las configuraciones de las abilitys, para mas info /ability help"
+    defualt: true
