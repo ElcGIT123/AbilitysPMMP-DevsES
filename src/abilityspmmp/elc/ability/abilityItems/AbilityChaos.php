@@ -14,9 +14,6 @@ use pocketmine\item\ItemTypeIds;
 use pocketmine\world\sound\BowShootSound;
 use pocketmine\world\particle\FlameParticle;
 
-use abilityspmmp\elc\Main;
-use pocketmine\scheduler\ClosureTask;
-
 final class AbilityChaos extends AbilityItem implements AbilityBoosting {
 
     private AbilityCooldown $cooldManager;

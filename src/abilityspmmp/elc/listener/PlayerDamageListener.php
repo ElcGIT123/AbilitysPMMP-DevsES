@@ -2,6 +2,7 @@
 
 namespace abilityspmmp\elc\listener;
 
+use abilityspmmp\elc\ability\AbilityBoosting;
 use pocketmine\event\Listener;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\player\Player;
@@ -20,25 +21,29 @@ final class PlayerDamageListener implements Listener {
 
         if($damager instanceof Player && $victim instanceof Player) {
             $itemInHand = $damager->getInventory()->getItemInHand();
+
             if(AbilityManager::isAbilityItem($itemInHand)) {
                 $id = $itemInHand->getNamedTag()->getString(AbilityItem::ABILITY_TAG);
                 $abstractAbility = AbilityFactory::get($id);
-                if($abstractAbility instanceof AbilityThrowing){
+
+                if($abstractAbility instanceof AbilityThrowing){                    
                     if(!$abstractAbility->getCooldownManager()->inCooldown($damager)) {
-                        $abstractAbility->use($damager, $victim);
+                        $abstractAbility->use($victim, $damager);
                         AbilityManager::onUse($damager, $abstractAbility);
-                        $damager->getInventory()->removeItem($itemInHand->setCount(1));
+                        $damager->getInventory()->removeItem($abstractAbility->setCount(1));
+
                         if(ConfigManager::getSetting("announcement_to_victim", true)){
                             $message = ConfigManager::getSetting("announcement_to_victim_msg", "Han usado [{ABILITY_NAME}] contra ti!");
                             $messageFinal = str_replace("{ABILITY_NAME}", $abstractAbility->getAbilityName(), $message);
                             $victim->sendPopup($messageFinal);
                         }
                     }
+                } elseif($abstractAbility instanceof AbilityBoosting) {
+                    $message = ConfigManager::getSetting("use_boostable_to_throwable_msg", "Esta ability es boosteable no arrojable!");
                 }
             }
 
         }
-
     }
 
 }

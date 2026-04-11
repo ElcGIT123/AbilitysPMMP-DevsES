@@ -5,10 +5,10 @@ in_cooldown_message: "No puedes usar esta ability hasta {SECONDS}"
 announcement_to_victim: true
 announcement_to_victim_msg: "Han usado {ABILITY_NAME} contra ti!"
 
-use_trhowable_to_boostable_msg: "Esta ability es arrojable no boosteable!"
-use_boostable_to_trhowable_msg: "Esta ability es boosteable no arrojable!"
+use_throwable_to_boostable_msg: "Esta ability es arrojable no boosteable!"
+use_boostable_to_throwable_msg: "Esta ability es boosteable no arrojable!"
 
-debug_mode: true
+debug_mode: false
 
 abilities:
   ability_jump:

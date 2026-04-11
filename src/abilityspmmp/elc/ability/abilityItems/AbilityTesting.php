@@ -33,7 +33,7 @@ final class AbilityTesting extends AbilityItem implements AbilityBoosting {
 
     public function getCooldownManager(): AbilityCooldown {
         return $this->cooldManager;
-    }
+    } 
 
     public function sendAbilityEffects(Player $player) {
         AbilityEffects::sendParticle($player, 
@@ -43,8 +43,13 @@ final class AbilityTesting extends AbilityItem implements AbilityBoosting {
     }
 
     public function use(Player $player): void {
-        
-        $player->sendMessage("Ability Testing Passed");
+        $player->setScoreTag("AbilityTest");
+        $player->setScale(0.1);
+         Main::getInstance()->getScheduler()->scheduleDelayedTask(new ClosureTask(
+            function() use($player): void {
+                $player->setScale(1.0);              
+        }), 20 * 7);
+        $player->sendMessage("tu scoreatag: ". $player->getScoreTag());
     }
 
 }

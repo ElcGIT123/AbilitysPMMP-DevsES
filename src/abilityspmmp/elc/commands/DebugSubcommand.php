@@ -12,17 +12,17 @@ final class DebugSubcommand {
 
     public function use(Player $player, ?array $args = null): void {
         if(!isset($args[1])) {
-            $player->sendMessage("Es necesario especificar el modo de DebugMode [on | off]");
+            $player->sendMessage("Es necesario especificar el estado de DebugMode [on | off]");
             return;
         }
         switch($args[1]) {
-            case strtolower("off"): 
+            case "off": 
                 ConfigManager::setSettings("debug_mode", false); 
-                $player->sendMessage("DEBUGG Mode: False");
+                $player->sendMessage("DEBUGG Mode: [off]");
             break;
-            case strtolower("on"): 
-                ConfigManager::seeSettings("debug_mode", true); 
-                $player->sendMessage("DEBUGG Mode: True");
+            case "on": 
+                ConfigManager::setSettings("debug_mode", true); 
+                $player->sendMessage("DEBUGG Mode: [on]");
             break;
             defualt: 
                 $player->sendMessage("Solo es valido ['on'] o ['off']"); 

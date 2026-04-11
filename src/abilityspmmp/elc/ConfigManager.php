@@ -18,6 +18,7 @@ final class ConfigManager {
 
     public static function setSettings(string $path, mixed $value = null): void {
         self::$plugin->getConfig()->setNested($path, $value);
+        self::$plugin->getConfig()->save();
     }
 
     public static function seeSettings(): null {
